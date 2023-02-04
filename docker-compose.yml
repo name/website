@@ -1,0 +1,15 @@
+version: "3.8"
+
+networks:
+  deltr:
+    external: true
+
+services:
+  website:
+    container_name: website
+    networks:
+      - deltr
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
