@@ -1,0 +1,58 @@
+@import "@radix-ui/colors/gray.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+::-moz-selection {
+  @apply text-accent bg-accent/10;
+}
+
+::selection {
+  @apply text-accent bg-accent/10;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.bg {
+  background-image: linear-gradient(to right, #101010, rgba(0, 0, 0, 0.83)),
+    url(/noise.svg), linear-gradient(#ff8a00 1px, transparent 1px),
+    linear-gradient(to right, #ff8a00 1px, #000 1px);
+  background-size: auto, auto, 20px 20px, 20px 20px;
+}
+
+.accordion-grid-cols {
+  grid-template-columns: min-content 125px 1fr min-content;
+}
