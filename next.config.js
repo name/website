@@ -24,6 +24,10 @@ const nextConfig = {
       },
     ],
   },
+  webpack: (config) => {
+    // Remove any custom CSS configuration here
+    return config;
+  },
 };
 
 module.exports = nextConfig;

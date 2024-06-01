@@ -1,0 +1,30 @@
+version: "3.8"
+
+networks:
+  prod-web-vpc:
+    name: prod-web-vpc
+    external: true
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.10.10.0/24
+          ip_range: 10.10.10.0/24
+          gateway: 10.10.10.100
+
+services:
+  web:
+    container_name: website
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /app/node_modules
+    #ports:
+    #  - "3000:3000"
+    networks:
+      - prod-web-vpc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
