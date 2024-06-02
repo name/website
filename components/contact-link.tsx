@@ -60,7 +60,7 @@ export const ContactItem = ({
 const Contact = () => {
   return (
     <Section>
-      <div className="flex flex-wrap mt-12 md:flex-col md:gap-y-0 gap-y-2 gap-x-6 md:items-end md:mt-0">
+      <div className="flex flex-wrap mt-12 md:flex-col md:gap-y-0 gap-y-2 gap-x-6 md:mt-0">
         <ContactItem icon={<Copy />}>
           <ContactCopyItem title="Email" copy="charlie@multiorb.net" />
         </ContactItem>
