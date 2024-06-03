@@ -50,11 +50,11 @@ export const photos = [
     alt: "",
   },
   {
-    src: "/images/water.jpg",
+    src: "/images/sunrays.jpg",
     alt: "",
   },
   {
-    src: "/images/sunrays.jpg",
+    src: "/images/water.jpg",
     alt: "",
   },
   {
