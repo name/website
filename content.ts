@@ -9,10 +9,10 @@ export const experiences = [
   },
   {
     company: "Multiorb",
-    role: "Software Engineer",
+    role: "Member of Technical Staff",
     range: "2022 - Current",
     description:
-      "Building a platform to help businesses access and manage their services in a more efficient way.",
+      "Designing, deploying, and maintaining the infrastructure for the Multiorb platform.",
     skills: ["Kubernetes", "Elixir", "React", "Rust", "TypeScript", "RabbitMQ"],
   },
   {
